@@ -10,6 +10,7 @@ public class TicTacToeGame {
 	public static int cpuPos;
 	
 	
+	
 	public static char[] createBoard() {
 
 		for(int i=0;i<9;i++) {
@@ -69,6 +70,30 @@ public class TicTacToeGame {
 		}
 		
 		TicTacToeGame.showBoard();
+		
+		boolean flag=false;
+		while(true) {
+			Random rand = new Random();
+			int cpuPos = rand.nextInt(9);
+			switch(cpuPos) {
+			case 0 : {if(board[0]=='-') { board[0]=cpuSymbol; flag=true;} break;}
+			case 1 : {if(board[1]=='-') { board[1]=cpuSymbol; flag=true;} break;}
+			case 2 : {if(board[2]=='-') { board[2]=cpuSymbol; flag=true;} break;}
+			case 3 : {if(board[3]=='-') { board[3]=cpuSymbol; flag=true;} break;}
+			case 4 : {if(board[4]=='-') { board[4]=cpuSymbol; flag=true;} break;}
+			case 5 : {if(board[5]=='-') { board[5]=cpuSymbol; flag=true;} break;}
+			case 6 : {if(board[6]=='-') { board[6]=cpuSymbol; flag=true;} break;}
+			case 7 : {if(board[7]=='-') { board[7]=cpuSymbol; flag=true;} break;}
+			case 8 : {if(board[8]=='-') { board[8]=cpuSymbol; flag=true;} break;}
+			}
+			if(flag==true) {
+				break;
+			}
+			
+		}
+		TicTacToeGame.showBoard();
+		
+		
 		
 	}
 }
